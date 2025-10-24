@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pramithas Upreti • Portfolio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- 3D Canvas -->
   <canvas id="scene"></canvas>
 
   <!-- Hero -->
-<section class="hero">
-  <header class="hud">
-    <h1>Pramithas Upreti</h1>
-    <p>Computing × Math with a philosophical lens.</p>
-    <nav class="cta">
-      <a class="button" href="#projects">Projects</a>
-      <a class="button" href="#about">About</a>
-      <a class="button" href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
-    </nav>
-    <small class="hint">drag to orbit • scroll to zoom • click the glowing satellites</small>
-  </header>
-</section>
+  <section class="hero">
+    <header class="hud">
+      <h1>Pramithas Upreti</h1>
+      <p>Computing × Math with a philosophical lens.</p>
+      <nav class="cta">
+        <a class="button" href="#projects">Projects</a>
+        <a class="button" href="#about">About</a>
+        <a class="button" href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <small class="hint">drag to orbit • scroll to zoom • click the glowing satellites</small>
+    </header>
+  </section>
 
   <!-- Sections -->
   <main>
@@ -60,7 +63,11 @@
     </footer>
   </main>
 
-  <!-- ES Modules from CDN (works perfectly on GitHub Pages) -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="main.js"></script>
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+  {"imports": {"three": "https://unpkg.com/three@0.173.0/build/three.module.js",}}
+  </script>
 </body>
+
 </html>
