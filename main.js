@@ -6,13 +6,14 @@ const canvas = document.getElementById("scene");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x02040a, 1);   // solid clear (no alpha blending with page)
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x02040a);
 
 const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 500);
-camera.position.set(0, 2, 8);
+camera.position.set(0, 2, 9);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;

@@ -27,14 +27,39 @@ body {
   z-index: 0;
 }
 
-/* hero takes a full viewport; content flows after */
+/* existing */
+section {
+  /* keep your current content card styles for sections below the fold */
+}
+
+/* NEW: the hero should NOT look like a card */
 .hero {
   position: relative;
-  min-height: 92vh;            /* full screen intro */
+  min-height: 92vh;
   display: grid;
   place-items: center;
-  z-index: 1;                   /* above canvas, below cards */
-  pointer-events: none;         /* so drags reach the 3D canvas */
+  z-index: 1;
+  pointer-events: none; /* drags reach the canvas */
+  /* override the generic <section> card look */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* let the buttons be clickable */
+.hero .hud { pointer-events: auto; }
+
+/* optional: a tiny translucent chip behind the buttons only */
+.hero .cta {
+  background: rgba(0,0,0,.18);
+  padding: .35rem .5rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  display: inline-flex;
+  gap: .25rem;
 }
 
 /* HUD now sits inside hero (not fixed) */
