@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'OrbitControls';
+import * as THREE from './three/three.module';
+import { OrbitControls } from './three/OrbitControls';
 
 /* ---------- Scene, Camera, Renderer ---------- */
 const canvas = document.getElementById("scene");
